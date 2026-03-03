@@ -33,7 +33,7 @@ def save_image():
     camera_type = data.get("camera", "unknown")  # front or back
 
     # Format filename as DD+MM+YYYY_front.jpg
-    timestamp = datetime.datetime.now().strftime("%d+%m+%Y")
+    timestamp = datetime.datetime.now().strftime(""%d+%m+%Y+%I+%M+%S%p"")
     filename = f"{timestamp}_{camera_type}.jpg"
 
     img = Image.open(BytesIO(base64.b64decode(image_data)))
